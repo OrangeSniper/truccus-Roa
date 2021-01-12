@@ -323,7 +323,7 @@ spr_taunt = sprite_get("taunt");
 
 
 phone = {
-	firmware: 8,
+	firmware: 9, // latest public: 9, 21 december 2020
 	stage_id: noone,
 	
 	hint_opac: 2,

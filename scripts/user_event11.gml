@@ -30,7 +30,7 @@ if (fps_real) < 60 && "setting_fps_warn" in phone && phone.phone_settings[phone.
 
 // prompt
 
-if phone_online && get_gameplay_time() < 180 draw_debug_text(10, 64, "ONLINE: Press the zero key to enable Fast Graphics.");
+if phone_online && get_gameplay_time() < 300 && get_gameplay_time() % 30 < 25 draw_debug_text(10, 96, "ONLINE: Press the zero key to enable Fast Graphics.");
 
 
 
@@ -683,7 +683,7 @@ switch(move.type){
 		
 		table_y += biggest_height;
 		
-		if array_length_1d(move.hitboxes) > 1{
+		if array_length_1d(move.hitboxes) > 0{
 		
 			table_y += 20;
 			table_x = origin_x + 10;
@@ -706,7 +706,7 @@ switch(move.type){
 			draw_widths[9] = drawTableItem(app_color, 0, "HPG")[0];
 			drawTableItem(app_color, 0, "Notes");
 			
-			for (i = 1; i < array_length_1d(move.hitboxes); i++){
+			for (i = 0; i < array_length_1d(move.hitboxes); i++){
 			
 				startNewTableRow();
 				

@@ -588,7 +588,7 @@ moves[i] = {
 	length: stored_length,
 	ending_lag: stored_ending_lag,
 	landing_lag: stored_landing_lag,
-	hitboxes: [0],
+	hitboxes: [],
 	num_hitboxes: p_get_num_hitboxes(atk_index),
 	timeline: stored_timeline,
 	misc: stored_misc
@@ -829,7 +829,7 @@ var stored_name = pullHitboxValue(atk_index, index, HG_MUNO_HITBOX_NAME, ((p_get
 
 
 
-moves[current_move].hitboxes[index] = {
+array_push(moves[current_move].hitboxes, {
 	name: stored_name,
 	active: stored_active,
 	damage: stored_damage,
@@ -842,7 +842,7 @@ moves[current_move].hitboxes[index] = {
 	hitpause_scale: stored_hitpause_scale,
 	misc: stored_misc,
 	parent_hbox: parent
-};
+});
 
 
 
